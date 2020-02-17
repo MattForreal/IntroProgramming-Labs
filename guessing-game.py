@@ -9,10 +9,13 @@ def main():
     while zero==0:
         print("I am thinking of an animal")
         guess = input("Guess what animal I am thinking of")
-        if guess == answer:
+        if guess.lower() == answer:
+            zero += 1
+            print("Correct answer! Great job!")
+        elif guess.lower() == "quit":
             zero += 1
         else:
             print("Wrong answer, please guess again")
-    print("Correct answer! Great job!")
+    print("Done")
 
 main ()
